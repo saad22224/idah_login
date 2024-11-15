@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Edah Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          174.02deg,
+          #e0b2e8 6.63%,
+          rgba(167, 173, 249, 0) 31.8%
+        );
+
+        backdrop-filter: blur(200px);
+
+        color: #333;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        /* gap: 2rem; */
+        justify-content: space-between;
+        overflow: hidden;
+      }
+      .login-box {
+        border-radius: 8px;
+        padding: 2rem;
+        width: 473px;
+        height: 519px;
+        opacity: 1;
+      }
+      .login-box h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .login-box p {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+
+      .image-container {
+        width: 333.11px;
+        height: 484px;
+      }
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+      }
+      @media (max-width: 993px) {
+        .image-container {
+          display: none;
+        }
+      }
+      .toggle-password {
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        left: -50px;
+        top: 20px;
+        gap: 10px;
+      }
+      .toggle-password span {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: right;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #666666cc;
+      }
+      .password-container {
+        position: relative;
+        padding-top: 20px;
+      }
+      .submit {
+        background: #8359e3;
+        color: white;
+        backdrop-filter: blur(60px);
+        width: 473px;
+        height: 56px;
+        padding: 10px;
+        gap: 10px;
+        border-radius: 30px;
+        opacity: 0px;
+
+        box-shadow: 0px 30px 30px 0px #452a7c26;
+      }
+      .submit:hover {
+        background-color: #623eb8;
+        color: white;
+      }
+      @media (max-width: 768px) {
+        .submit {
+          width: 100%; /* جعل الزر يتكيف مع الشاشة */
+          height: 40px;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="password"] {
+          width: 100%; /* يجعل الحقول تتكيف مع العرض */
+          max-width: 100%; /* يمنع تجاوز العرض */
+          height: 40px;
+          border-radius: 12px;
+          padding: 0 10px; /* إضافة حشو داخلي */
+          box-sizing: border-box;
+        }
+
+        /* إضافة هامش للتأكد من أن الحقول لا تلتصق بجوانب الشاشة */
+        .login-box {
+          width: 100%; /* يجعل الحاوية تأخذ المساحة المتاحة */
+          padding: 1rem; /* زيادة الحشو لزيادة التباعد */
+          box-sizing: border-box; /* تأكد من أن الحواف والـ padding لا تؤثر على العرض */
+          overflow: hidden; /* منع الـ overflow */
+        }
+        .toggle-password {
+          left: 0px;
+        }
+      }
+      .container {
+        padding: 0 1rem; /* تقليل الفراغات الجانبية */
+      }
+      .submit {
+        width: 473px !important; /* نفس عرض حقول الإدخال */
+      }
+
+      @media (max-width: 768px) {
+        .submit {
+          width: 100% !important; /* للحفاظ على التناسق على الشاشات الصغيرة */
+        }
+      }
+      /* تغيير لون علامة الصح عندما يتم تحديد الصندوق */
+      .form-check-input:checked {
+        background-color: black !important; /* لون الخلفية الأسود */
+        border-color: black !important; /* لون الحدود الأسود */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="login-box text-center">
+        <div class="text" style="text-align: right">
+          <h4
+            style="
+              font-family: Cairo;
+              font-size: 32px;
+              font-weight: 600;
+              line-height: 59.97px;
+              text-align: right;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+            "
+          >
+            مرحبا بك في الايضاح !
+          </h4>
+          <p
+            style="
+              font-family: Cairo;
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 37.48px;
+              text-align: right;
+              text-underline-position: from-font;
+              text-decoration-skip-ink: none;
+            "
+          >
+            يرجي تسجيل الدخول للتحكم في كل شئ
+          </p>
+        </div>
+        <form>
+          <div class="mb-3 text-start">
+            <label for="email" class="form-label text-end w-100"
+              >البريد الإلكتروني</label
+            >
+            <input
+              style="
+                border: 1px solid #66666659;
+                width: 473px;
+                height: 56px;
+                gap: 0px;
+                border-radius: 12px;
+              "
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="أدخل بريدك الإلكتروني"
+            />
+          </div>
+          <div class="mb-3 text-start password-container">
+            <label for="password" class="form-label text-end w-100"
+              >كلمة المرور</label
+            >
+            <div class="toogle toggle-password">
+              <span class="word">اخفاء</span>
+              <i
+                class="ri-eye-off-line toggle-icon"
+                onclick="togglePassword()"
+              ></i>
+            </div>
+            <input
+              style="
+                border: 1px solid #66666659;
+                width: 473px;
+                height: 56px;
+                gap: 0px;
+                border-radius: 12px;
+              "
+              type="text"
+              class="form-control"
+              id="password"
+              placeholder="أدخل كلمة المرور"
+            />
+          </div>
+          <div
+            class="form-check mb-3 d-flex align-items-center justify-content-start"
+            style="
+              width: Fixed (472px) px;
+              height: Hug (46px) px;
+              gap: 8px;
+              opacity: 0px;
+              padding: 10px;
+            "
+          >
+            <input
+              type="checkbox"
+              class="form-check-input ms-2"
+              id="remember"
+            />
+            <label
+              class="form-check-label"
+              style="
+                font-family: Cairo;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 29.98px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+              "
+              for="remember"
+              >تذكرني</label
+            >
+          </div>
+          <button type="submit" class="btn submit w-100">تسجيل الدخول</button>
+        </form>
+      </div>
+      <div class="image-container">
+        <img
+          src="images/ffb3f82ac2dadd6101d77adf49cc1a6b.png"
+          alt="Al Edah Logo"
+        />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const toggleIcon = document.querySelector(".toggle-icon");
+        const word = document.querySelector(".word");
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          toggleIcon.classList.replace("ri-eye-off-line", "ri-eye-line");
+          word.innerHTML = "اخفاء";
+        } else {
+          passwordField.type = "password";
+          toggleIcon.classList.replace("ri-eye-line", "ri-eye-off-line");
+          word.innerHTML = "اظهار";
+        }
+      }
+    </script>
+  </body>
+</html>
